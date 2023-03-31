@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+
+        <section class="side">
+            <img
+                src="https://sapient.training/wp-content/uploads/2021/03/Sapient-Training-LOGO.png"
+                alt="" class="logo">
+
+                <!-- <img src="./images/undraw_teaching_re_g7e3.svg" alt="" class="teaching"> -->
+
+        </section>
+
+        <section class="main">
+            <div class="login-container">
+                <img src="./images/avatar.svg" alt="">
+                <p class="title">Welcome Back</p>
+                <div class="separator"></div>
+                <p class="wlcm-msg">please provide login credentials to proceed
+                    and have access to all our services</p>
+                <form onsubmit="return Validation()">
+                    <input class="common" type="text" name="text" id="username"
+                        placeholder='Username'>
+                      
+                    <p id="error"></p>
+                    <br>
+                    <input class="common" type="Password" name="Password" id="Password"
+                        placeholder='Password'>
+                        
+                    <p id="error1"></p>
+                    <br>
+                    <input class="submit" type="submit" value="SUBMIT">
+                </form>
+                <a href="">Forgot Password?</a>
+            </div>
+        </section>
+
+
+        <script src="./app.js"></script>
+    </body>
+
+</html>

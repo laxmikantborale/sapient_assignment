@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montesrrat', sans-serif;
+    color: #303433;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.side {
+    background: url(./images/bk.png) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+
+.side img {
+    width: 50%;
+    min-width: 50%;
+}
+
+img.teaching {
+    height: 400px;width: 400px;
+}
+
+.side .logo {
+    margin-left: 10px;
+    position: absolute;
+    top: 40px;
+}
+
+.login-container {
+    /* min-width: 50px; */
+    width: 400px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.login-container a {
+    color: #696969;
+    font-size: 18px;
+}
+
+p.title {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    color: rgb(62, 56, 56);
+}
+
+.separator {
+    width: 150px;
+    height: 4px;
+    background-color: #843bc7;
+    margin-bottom: 24px;
+}
+
+.wlcm-msg {
+    text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    color: #696969;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+input, button {
+    border: none;
+    outline: none;
+    background-color: red;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+input.common {
+    width: 100%;
+    background: #e6e6e6;
+    color: #333;
+    letter-spacing: 0.5px;
+    padding: 14px 34px;
+}
+
+i.fa-user {
+    position: absolute;
+    left: 20px;
+    top: 7.5%;
+    transform: translate(-50%);
+    color: #888;
+    transition:  color 0.4s;
+    font-size: 15px;
+    /* margin-left: 1px; */
+}
+
+i.fa-lock {
+    position: absolute;
+    left: 22px;
+    top: 40%;
+    transform: translate(-50%);
+    color: #888;
+    transition:  color 0.4s;
+    font-size: 15px;
+}
+
+#error{
+    color: red;
+    padding:15px 0 0 0;
+}
+
+input:focus ~ i {
+    color: #843bc7;
+}
+
+
+
+input.submit {
+    color: white;
+    padding: 12px 10px;
+    margin: 15px auto;
+    width: 50%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+    transition: opacity 0.4s;
+}
+
+button.submit:hover {
+    opacity: 0.9;
+}
+
+
+
+/* =======================validation================================== */
+
+.form-ctrl small {
+    visibility: hidden;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    /* margin-bottom: 20px; */
+}
+
+.form-ctrl.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.form-ctrl .fa-solid {
+    position: absolute;
+    left: 550px;
+    top: 15px;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+
+.form-ctrl.success i.fa-circle-check {
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-ctrl.error i.fa-circle-exclamation {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+/* ======================================================== */
+
+@media (max-width: 800px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+/* background-color: #2ecc71; */
+    }
+
+    .login-container {
+        min-width: 300px;
+        overflow: hidden;
+    }
+.main{
+    width:90%;
+    margin:0 auto;
+}
+    .side {
+        display: none;
+    }
+}
+/* @media (max-width: 280px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .wlcm-msg{
+        font-size: 12px;
+        line-height: 15px;
+    }
+} */
